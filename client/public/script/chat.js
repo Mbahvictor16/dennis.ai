@@ -6,6 +6,7 @@ const userIcon = '<i class="fa fa-user" aria-hidden="true"></i>';
 let loadInterval;
 
 function loader(element) {
+  formBox.classList.add("hide");
   loadInterval = setInterval(() => {
     element.innerHTML += "|";
     if (element.innerHTML === "||") {
@@ -20,9 +21,11 @@ function typeText(element, text) {
   let interval = setInterval(() => {
     if (index < text.length) {
       element.innerHTML += text.charAt(index);
+      messageDiv.scrollBy(0, 1);
       index++;
     } else {
       clearInterval(interval);
+      formBox.classList.remove("hide");
     }
   }, 30);
 }
@@ -51,7 +54,6 @@ async function sendText(e) {
     return;
   }
   messageDiv.innerHTML += chatContainer(false, textBox.value);
-  formBox.classList.add("hide");
 
   // bot stripe
   let uniqueId = generateId();
@@ -81,7 +83,6 @@ async function sendText(e) {
     const parsedData = data.bot_response.trim();
 
     typeText(responseMessage, parsedData);
-    formBox.classList.remove("hide");
   } else {
     formBox.innerHTML = "";
     formBox.innerText = "An error occured";
