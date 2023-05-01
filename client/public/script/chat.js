@@ -53,7 +53,6 @@ async function sendText(e) {
   messageDiv.innerHTML += chatContainer(false, textBox.value);
 
   // bot stripe
-  formBox.classList.add("hide");
   let uniqueId = generateId();
   messageDiv.innerHTML += chatContainer(true, "", uniqueId);
   textBox.readOnly = true;
@@ -77,6 +76,7 @@ async function sendText(e) {
   clearInterval(loadInterval);
 
   if (response.ok) {
+    formBox.classList.add("hide");
     const data = await response.json();
     const parsedData = data.bot_response.trim();
 
