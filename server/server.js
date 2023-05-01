@@ -29,13 +29,13 @@ app.get("/chat", async (req, res) => {
   });
 });
 
-app.post("/chat", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     const result = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${req.body.prompt}`,
       temperature: 0,
-      max_tokens: 5000,
+      max_tokens: 2000,
       top_p: 1,
       frequency_penalty: 0.5,
       presence_penalty: 0,
