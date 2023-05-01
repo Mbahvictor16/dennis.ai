@@ -61,7 +61,7 @@ async function sendText(e) {
   loader(responseMessage);
 
   // bot response
-  const response = await fetch("http://localhost:5000/chat", {
+  const response = await fetch("https://dennisai.onrender.com/chat", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
