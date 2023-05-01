@@ -1,0 +1,10 @@
+$color: (
+  "background": #272727,
+  "text-primary": #fff,
+  "text-sec": #000,
+  "button": rgb(251, 176, 36),
+);
+
+@function getColor($color-type) {
+  @return map-get($color, $color-type);
+}

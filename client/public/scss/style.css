@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#app {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+#app header {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+}
+#app header img {
+  width: 220px;
+}
+#app main {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#app main h2 {
+  font-size: 3rem;
+  padding: 5px;
+  margin: 30px;
+}
+#app main a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 8px;
+  border: 2px #fff solid;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 960px) {
+  main h2 {
+    font-size: 0.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

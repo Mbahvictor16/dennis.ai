@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/chat.css" />
+    <title>Chat</title>
+    <script
+      src="https://kit.fontawesome.com/2a8972df98.js"
+      crossorigin="anonymous"
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="message"></div>
+
+      <form method="post">
+        <textarea
+          name="prompt"
+          id=""
+          cols="60"
+          rows="1"
+          placeholder="Ask DennisAi"
+        ></textarea>
+        <button type="submit">
+          <i class="fa fa-send" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+    <script src="./script/chat.js"></script>
+  </body>
+</html>
