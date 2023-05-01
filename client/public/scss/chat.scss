@@ -20,6 +20,10 @@ body {
     overflow-x: hidden;
     height: clamp(100% - 7%, 10vw, 100% - 3%);
 
+    .hide {
+      display: none;
+    }
+
     .human {
       background-color: #272727;
       display: flex;

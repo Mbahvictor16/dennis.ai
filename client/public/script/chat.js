@@ -55,11 +55,11 @@ async function sendText(e) {
   // bot stripe
   let uniqueId = generateId();
   messageDiv.innerHTML += chatContainer(true, "", uniqueId);
-  messageDiv.scrollBy;
   textBox.readOnly = true;
   messageDiv.scrollTop = messageDiv.scrollHeight;
   const responseMessage = document.getElementById(uniqueId);
   loader(responseMessage);
+  formBox.classList.add("hide");
 
   // bot response
   const response = await fetch("https://dennisai.onrender.com", {
@@ -81,7 +81,10 @@ async function sendText(e) {
     const parsedData = data.bot_response.trim();
 
     typeText(responseMessage, parsedData);
+    formBox.classList.remove("hide");
   } else {
+    formBox.innerHTML = "";
+    formBox.innerText = "An error occured";
   }
 
   textBox.readOnly = false;
