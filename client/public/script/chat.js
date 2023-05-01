@@ -55,6 +55,7 @@ async function sendText(e) {
   // bot stripe
   let uniqueId = generateId();
   messageDiv.innerHTML += chatContainer(true, "", uniqueId);
+  messageDiv.scrollBy;
   textBox.readOnly = true;
   messageDiv.scrollTop = messageDiv.scrollHeight;
   const responseMessage = document.getElementById(uniqueId);

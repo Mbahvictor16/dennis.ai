@@ -23,12 +23,6 @@ app.get("/", async (req, res) => {
   });
 });
 
-app.get("/chat", async (req, res) => {
-  res.status(200).send({
-    message: "Ask DennisAi",
-  });
-});
-
 app.post("/", async (req, res) => {
   try {
     const result = await openai.createCompletion({
