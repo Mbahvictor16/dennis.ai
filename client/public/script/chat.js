@@ -53,13 +53,13 @@ async function sendText(e) {
   messageDiv.innerHTML += chatContainer(false, textBox.value);
 
   // bot stripe
+  formBox.classList.add("hide");
   let uniqueId = generateId();
   messageDiv.innerHTML += chatContainer(true, "", uniqueId);
   textBox.readOnly = true;
   messageDiv.scrollTop = messageDiv.scrollHeight;
   const responseMessage = document.getElementById(uniqueId);
   loader(responseMessage);
-  formBox.classList.add("hide");
 
   // bot response
   const response = await fetch("https://dennisai.onrender.com", {
