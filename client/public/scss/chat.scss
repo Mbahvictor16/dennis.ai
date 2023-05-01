@@ -15,14 +15,14 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
+  .hide {
+    display: none;
+  }
+
   .message {
     width: 100%;
     overflow-x: hidden;
     height: clamp(100% - 7%, 10vw, 100% - 3%);
-
-    .hide {
-      display: none;
-    }
 
     .human {
       background-color: #272727;
